@@ -4,23 +4,21 @@ Enquanto o total for menor que R$500. Não se sabe quantas vezes vai repetir.
 ● Depósito: rand(20,100)
 ● Conte os depósitos.
 ● Some o dinheiro.
-
 */
+
 $qtdDepositos = 0;
 $somaDinheiro = 0;
 
-do{
-    $Deposito = rand(20,100);
-    echo "Depósito: R$ $Deposito <br>";
+while ($somaDinheiro < 500) {
 
+    $deposito = rand(20,100);
+    echo "Depósito: R$ $deposito <br>";
 
-    $somaDinheiro += $Deposito;
-
+    $somaDinheiro += $deposito;
     $qtdDepositos++;
+}
 
-} while ($somaDinheiro < 500);
-
-echo "Quantidade de depositos: $qtdDepositos<br>";
-echo "Soma total dos valores: $somaDinheiro<br>";
-
+echo "<hr>";
+echo "Quantidade de depósitos: $qtdDepositos <br>";
+echo "Soma total dos valores: R$ $somaDinheiro";
 ?>
